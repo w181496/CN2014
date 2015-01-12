@@ -1,0 +1,8 @@
+-classpath '/home/w181496/IdeaProjects/CN2014_Client/build/classes/main:/home/w181496/IdeaProjects/CN2014_Client/build/resources/main'
+-d '/home/w181496/IdeaProjects/CN2014_Client/build/docs/javadoc'
+-doctitle 'CN2014_Client 1.0 API'
+-quiet 
+-windowtitle 'CN2014_Client 1.0 API'
+'/home/w181496/IdeaProjects/CN2014_Client/src/main/java/MyFrame.java'
+'/home/w181496/IdeaProjects/CN2014_Client/src/main/java/Sperm.java'
+'/home/w181496/IdeaProjects/CN2014_Client/src/main/java/main.java'
