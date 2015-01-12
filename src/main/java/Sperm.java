@@ -12,15 +12,30 @@ public class Sperm extends JPanel{
     //JTextField txt;
     ImageIcon left;
     ImageIcon right;
+    ImageIcon up;
+    ImageIcon down;
+    ImageIcon leftup;
+    ImageIcon leftdown;
+    ImageIcon rightup;
+    ImageIcon rightdown;
 
     Sperm()
     {
         x = y = 20;
         setSize(122,124);
         setLocation(x, y);
-        setBackground(Color.white);
-        left  = new ImageIcon("sperm.gif");
-        right = new ImageIcon("sperm_right.gif");
+        setBackground(new Color(0, 0, 0, 0));
+        setOpaque(false);
+
+        left        = new ImageIcon("sperm_left.gif");
+        right       = new ImageIcon("sperm_right.gif");
+        up          = new ImageIcon("sperm_up.gif");
+        down        = new ImageIcon("sperm_down.gif");
+        leftup      = new ImageIcon("sperm_leftup.gif");
+        leftdown    = new ImageIcon("sperm_leftdown.gif");
+        rightup     = new ImageIcon("sperm_rightup.gif");
+        rightdown   = new ImageIcon("sperm_rightdown.gif");
+
         label = new JLabel(right);
         //txt.setText("");
         //add(txt);
@@ -37,6 +52,36 @@ public class Sperm extends JPanel{
         this.label.setIcon(left);
     }
 
+    void changeToUp()
+    {
+        this.label.setIcon(up);
+    }
+
+    void changeToDown()
+    {
+        this.label.setIcon(down);
+    }
+
+    void changeToLeftUp()
+    {
+        this.label.setIcon(leftup);
+    }
+
+    void changeToLeftDown()
+    {
+        this.label.setIcon(leftdown);
+    }
+
+    void changeToRightUp()
+    {
+        this.label.setIcon(rightup);
+    }
+
+    void changeToRightDown()
+    {
+        this.label.setIcon(rightdown);
+    }
+
     int getXX()
     {
         return this.x;
@@ -50,6 +95,9 @@ public class Sperm extends JPanel{
     @Override
     public void paintComponent(Graphics e)
     {
+        e.setColor(getBackground());
+        Rectangle r = e.getClipBounds();
+        e.fillRect(r.x, r.y, r.width, r.height);
         super.paintComponent(e);
     }
 
